@@ -1,12 +1,19 @@
 .c-card {
-  border: none !important;
-  background-color: #ffe17b !important;
-  min-height: 300px !important;
-  max-width: 22rem !important;
+  border: none;
+  background-color: #ffe17b;
+  min-height: 300px;
+  max-width: 22rem;
   width: 100%;
+  white-space: pre-wrap;
+  border-radius: 15px;
 }
 
 /* Card-Footer */
+.c-card .card-footer {
+  border-top: 0;
+  border-radius: 15px;
+  background-color: #ffe17b;
+}
 .c-card .card-footer svg {
   color: black;
   font-size: 22px;
@@ -16,6 +23,70 @@
   cursor: pointer;
 }
 
+/* New Note Component */
+
 .c-card .form-control {
   height: 100%;
+  background-color: #d6e8db;
+  border: 0;
+  resize: none;
+}
+
+.c-card .form-control:focus,
+.c-card .form-control:focus-visible {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.im-card {
+  background-color: #d6e8db;
+}
+
+.im-card .card-footer {
+  background-color: #d6e8db;
+}
+
+.save-btn {
+  border-radius: 10px 20px 10px 20px;
+  background-color: #ffe17b;
+  border: none;
+  color: black;
+}
+
+.save-btn:hover,
+.save-btn:focus-visible,
+.save-btn:active {
+  background-color: white;
+  box-shadow: none;
+  border: none;
+  color: black;
+}
+
+/* Search Bar */
+
+.search-form {
+  position: relative;
+  background-color: #61677a;
+  border-radius: 12px;
+}
+.search-form svg {
+  font-size: 24px;
+}
+.search-form svg:hover {
+  color: white;
+  cursor: pointer;
+}
+.search-form input {
+  border: 0;
+  background-color: #61677a;
+  width: 100%;
+  font-weight: 700;
+  border-radius: 12px;
+}
+.search-form input:focus-visible,
+.search-form input:focus {
+  background-color: #61677a;
+  box-shadow: none;
+  border: 0;
 }
