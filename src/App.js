@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col } from "react-bootstrap";
+import "./App.css";
+import { v4 as uuidv4 } from "uuid";
+import NoteList from "./components/note-list";
 
 function App() {
+  const [noteListContent, setNoteListContent] = useState([
+    {
+      text: "this is a first note",
+      date: "18/05/2001",
+      id: uuidv4(),
+    },
+    {
+      text: "this is a second note",
+      date: "01/01/2001",
+      id: uuidv4(),
+    },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NoteList noteListContent={noteListContent} />
     </div>
   );
 }
