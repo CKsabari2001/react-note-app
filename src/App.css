@@ -23,7 +23,7 @@
   cursor: pointer;
 }
 
-/* New Note Component */
+/* New Note  */
 
 .c-card .form-control {
   height: 100%;
@@ -89,4 +89,35 @@
   background-color: #61677a;
   box-shadow: none;
   border: 0;
+}
+
+/* Header  */
+
+.toggle-btn {
+  background-color: #61677a;
+  border: 0;
+  color: black;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.toggle-btn:hover,
+.toggle-btn:active,
+.toggle-btn:focus,
+.toggle-btn:focus-visible {
+  background-color: #7a8199 !important;
+  border: 0;
+  box-shadow: none;
+  color: white;
+}
+
+.h100vh {
+  height: 100vh;
+}
+
+.bg-color-light {
+  background-color: #fafafa;
+}
+
+.bg-color-dark {
+  background-color: #000000;
 }

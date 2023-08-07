@@ -1,7 +1,7 @@
 import Note from "./note";
 import NewNote from "./new-note";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 function NoteList({ noteListContent, getNote, deleteNote }) {
   return (
@@ -9,6 +9,7 @@ function NoteList({ noteListContent, getNote, deleteNote }) {
       {noteListContent.map((note) => {
         return (
           <Col
+            key={note.id}
             sm={12}
             md={4}
             xl={3}
@@ -19,6 +20,7 @@ function NoteList({ noteListContent, getNote, deleteNote }) {
               date={note.date}
               id={note.id}
               deleteNote={deleteNote}
+              key={note.id}
             />
           </Col>
         );
