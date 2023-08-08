@@ -1,6 +1,13 @@
+h1,
+.btn,
+.form-control::placeholder,
+p {
+  font-family: "Poppins", sans-serif;
+}
+
 .c-card {
   border: none;
-  background-color: #ffe17b;
+  background-color: #e8def8;
   min-height: 300px;
   max-width: 22rem;
   width: 100%;
@@ -12,22 +19,24 @@
 .c-card .card-footer {
   border-top: 0;
   border-radius: 15px;
-  background-color: #ffe17b;
+  background-color: #e8def8;
 }
 .c-card .card-footer svg {
   color: black;
   font-size: 22px;
+  transition: all 0.3s ease-in-out;
 }
 .c-card .card-footer svg:hover {
   color: red;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 /* New Note  */
 
 .c-card .form-control {
   height: 100%;
-  background-color: #d6e8db;
+  background-color: #ffd8e4;
   border: 0;
   resize: none;
 }
@@ -40,53 +49,54 @@
 }
 
 .im-card {
-  background-color: #d6e8db;
+  background-color: #ffd8e4;
 }
 
 .im-card .card-footer {
-  background-color: #d6e8db;
+  background-color: #ffd8e4;
 }
 
 .save-btn {
-  border-radius: 10px 20px 10px 20px;
-  background-color: #ffe17b;
+  border-radius: 20px;
+  background-color: #e3e3e3;
   border: none;
   color: black;
+  transition: all 0.3s ease-in-out;
 }
 
 .save-btn:hover,
 .save-btn:focus-visible,
 .save-btn:active {
-  background-color: white;
+  background-color: #c6c6c6;
   box-shadow: none;
   border: none;
   color: black;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Search Bar */
 
 .search-form {
   position: relative;
-  background-color: #61677a;
+  background-color: #e3e3e3;
   border-radius: 12px;
 }
 .search-form svg {
   font-size: 24px;
 }
-.search-form svg:hover {
-  color: white;
-  cursor: pointer;
-}
 .search-form input {
   border: 0;
-  background-color: #61677a;
+  background-color: #e3e3e3;
   width: 100%;
-  font-weight: 700;
+  font-weight: 500;
   border-radius: 12px;
+}
+.search-form input::placeholder {
+  font-weight: 400;
 }
 .search-form input:focus-visible,
 .search-form input:focus {
-  background-color: #61677a;
+  background-color: #e3e3e3;
   box-shadow: none;
   border: 0;
 }
@@ -94,30 +104,88 @@
 /* Header  */
 
 .toggle-btn {
-  background-color: #61677a;
+  background-color: #e3e3e3;
   border: 0;
   color: black;
   border-radius: 20px;
-  font-weight: 600;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
 }
 .toggle-btn:hover,
 .toggle-btn:active,
 .toggle-btn:focus,
 .toggle-btn:focus-visible {
-  background-color: #7a8199 !important;
+  background-color: #c6c6c6 !important;
   border: 0;
   box-shadow: none;
-  color: white;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease-in-out;
 }
 
 .h100vh {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .bg-color-light {
-  background-color: #fafafa;
+  background-color: #fffbfe;
 }
 
 .bg-color-dark {
-  background-color: #000000;
+  background-color: #121212;
+}
+
+/* Dark Mode */
+
+.bg-color-dark .search-form,
+.bg-color-dark .search-form .form-control::placeholder,
+.bg-color-dark .search-form input,
+.bg-color-dark .toggle-btn:active,
+.bg-color-dark .toggle-btn:focus,
+.bg-color-dark .toggle-btn:focus-visible {
+  background-color: #261a39;
+  color: #aaaaaa;
+}
+.bg-color-dark .search-form svg,
+.bg-color-dark .search-form input {
+  color: white;
+}
+
+.bg-color-dark .toggle-btn,
+.bg-color-dark .toggle-btn:active,
+.bg-color-dark .toggle-btn:focus,
+.bg-color-dark .toggle-btn:focus-visible {
+  background-color: #261a39 !important;
+  color: white;
+}
+.bg-color-dark .toggle-btn:hover {
+  background-color: #282828 !important;
+  color: white;
+}
+
+.bg-color-dark h1 {
+  color: white;
+}
+
+.bg-color-dark .c-card,
+.bg-color-dark .c-card .card-footer {
+  background-color: #212121;
+  color: white;
+}
+.bg-color-dark .c-card svg {
+  color: white;
+}
+
+.bg-color-dark .c-card .form-control,
+.bg-color-dark .im-card,
+.bg-color-dark .im-card .card-footer {
+  background-color: #3b2f4d;
+  color: white;
+}
+
+.bg-color-dark .save-btn {
+  background-color: #212121;
+  color: white;
+}
+.bg-color-dark .save-btn:hover {
+  background-color: #282828;
 }

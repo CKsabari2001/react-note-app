@@ -9,8 +9,6 @@ import Header from "./components/header";
 function App() {
   const [noteListContent, setNoteListContent] = useState([]);
 
-  console.log(noteListContent);
-
   const getNote = (data) => {
     const date = new Date();
     const newNote = {
@@ -33,8 +31,12 @@ function App() {
 
   useEffect(() => {
     const saveNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
+    const bgColor = JSON.parse(localStorage.getItem("react-note-bg-value"));
     if (saveNotes) {
       setNoteListContent(saveNotes);
+    }
+    if (bgColor) {
+      setBgColor(bgColor);
     }
   }, []);
 
@@ -43,7 +45,8 @@ function App() {
       "react-notes-app-data",
       JSON.stringify(noteListContent)
     );
-  }, [noteListContent]);
+    localStorage.setItem("react-note-bg-value", JSON.stringify(bgColor));
+  }, [noteListContent, bgColor]);
 
   return (
     <div className={`h100vh ${bgColor ? "bg-color-dark" : "bg-color-light"}`}>
