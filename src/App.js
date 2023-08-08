@@ -48,6 +48,21 @@ function App() {
     localStorage.setItem("react-note-bg-value", JSON.stringify(bgColor));
   }, [noteListContent, bgColor]);
 
+  const getEditNoteData = (data) => {
+    const date = new Date();
+    const newNote = {
+      id: data.id,
+      text: data.data,
+      date: date.toLocaleDateString(),
+    };
+    const newNoteList = noteListContent.map((existingNote) => {
+      return newNote.id === existingNote.id
+        ? { id: newNote.id, text: newNote.text, date: newNote.date }
+        : existingNote;
+    });
+    setNoteListContent(newNoteList);
+  };
+
   return (
     <div className={`h100vh ${bgColor ? "bg-color-dark" : "bg-color-light"}`}>
       <div className="container-fluid">
@@ -60,6 +75,7 @@ function App() {
             })}
             getNote={getNote}
             deleteNote={deleteNote}
+            getEditNoteData={getEditNoteData}
           />
         </div>
       </div>

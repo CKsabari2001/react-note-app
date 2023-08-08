@@ -24,11 +24,12 @@ function NewNote({ getNote }) {
       <Card.Body>
         <Card.Text className="h-100">
           <textarea
-            className="form-control"
+            className="form-control getNote-form"
             name="getNote"
             id="get-Note"
             onChange={handleChange}
             value={noteData}
+            placeholder="Type here to Create New Note"
           ></textarea>
         </Card.Text>
       </Card.Body>
